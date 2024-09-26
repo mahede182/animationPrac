@@ -33,7 +33,6 @@ const _spacing = 4;
 const _borderRadius = 8;
 
 const Tabs = ({ data, selectIndex, onChange, activeBackgroundColor = "#111", inactiveBackgroundColor = "#ddd", activeColor = "#fff", inactiveColor = "#999" }: TabsProps) => {
-    console.log(selectIndex, "data");
     return (
         <View style={{ flexDirection: "row", gap: _spacing }}>
             {
