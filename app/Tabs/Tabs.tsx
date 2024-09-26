@@ -9,10 +9,9 @@ import Animated, {
   LinearTransition,
 } from "react-native-reanimated";
 import { MotiView } from "moti";
-import { motifySvg } from "moti/svg";
-import { opacity } from "react-native-reanimated/lib/typescript/reanimated2/Colors";
+import { Icon } from "./Icon";
 
-type iconNames = keyof typeof icons;
+export type iconNames = keyof typeof icons;
 
 type TabItem = {
   icon: iconNames;
@@ -28,15 +27,6 @@ type TabsProps = {
   activeBackgroundColor?: string;
   inactiveBackgroundColor?: string;
 };
-
-type IconProp = {
-  name: iconNames;
-};
-
-function Icon({ name, ...rest }: IconProp) {
-  const IconComponent = motifySvg(icons[name])();
-  return <IconComponent {...rest} />;
-}
 
 const _spacing = 4;
 const _borderRadius = 8;
